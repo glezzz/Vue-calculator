@@ -80,8 +80,8 @@ export default {
     },
     equal() {
       this.current = `${this.operator(
-          parseFloat(this.current),
-          parseFloat(this.previous)
+          parseFloat(this.previous),
+          parseFloat(this.current)
       )}`;
       this.previous = null;
     }
@@ -113,6 +113,11 @@ export default {
 .btn {
   background-color: #eee;
   border: 1px solid #999;
+  cursor:pointer
+}
+
+.btn:active {
+  transform: scale(0.95);
 }
 
 .operator {
